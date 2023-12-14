@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losowy Cytat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/e51d2bfce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Losowy Cytat</a>
+        <i class="fas fa-quote-right text-white"></i>
+        <div class="ml-auto">
+            <span id="visitCount" class="text-white">Odwiedzin: 0</span>
+        </div>
+    </nav>
+
+    <button id="generate">Generuj losowy cytat</button>
+    <button id="translate" class="translate-btn">Przetłumacz</button>
+    <div id="quote"></div>
+    <div id="translatedQuote"></div>
+
+    <footer class="footer fixed-bottom">
+        <p>© 2023 Szymon Góral</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+        window.onload = function () {
+            var visits = parseInt(document.cookie.split('=')[1]) || 0;
+            visits++;
+            document.cookie = 'visits=' + visits + ';expires=' + new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000).toUTCString() + ';path=/';
+            document.getElementById('visitCount').textContent = 'Odwiedzin: ' + visits;
+        }
+    </script>
+</body>
+
+</html>

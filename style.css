@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('tlo.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+#quote {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    button {
+        width: 100%;
+    }
+}
+
+nav,
+footer {
+    background-color: rgba(52, 152, 219, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+    opacity: 0.8;
+}
+
+.translate-btn {
+    background-color: #3498db;
+    margin-left: 10px;
+    color: #fff;
+}
